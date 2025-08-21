@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Loops</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>JavaScript Loops</h1>
+      <!-- Dark Mode Button -->
+      <button id="theme-toggle">🌙 Dark Mode</button>
+      <p>Loops are used to execute a piece of code again and again.
+        Loops in JavaScript allow us to repeat a block of code multiple times
+        until a certain condition is met. They help avoid writing the same code
+        again and again.
+      </p>
+      <ol>
+        <li>For Loop</li>
+        <li>While Loop</li>
+        <li>Do-While Loop</li>
+        <li>For-of Loop</li>
+        <li>For-in Loop</li>
+      </ol>
+
+      <!-- For Loop -->
+      <h2>1] For Loop</h2>
+      <p>
+        A for loop in JavaScript is used to repeat a block of code a certain
+        number of times.
+      </p>
+      <div class="syntax">
+        <h3>Syntax:</h3>
+        <pre>
+for(initialization; condition; increment/decrement) {
+    // code to execute
+}</pre
+        >
+        <ul>
+          <li>initialization → set a starting value (e.g., let i = 0)</li>
+          <li>condition → loop runs while this is true (e.g., i &lt; 5)</li>
+          <li>
+            increment/decrement → updates the counter each time (e.g., i++)
+          </li>
+        </ul>
+      </div>
+
+      <h3>Example: Print sum of first 10 numbers</h3>
+      <pre>
+let sum = 0;
+for (let i = 1; i <= 10; i++) { // Here we give nth no as 10
+    sum += i;
+}
+console.log(sum);</pre
+      >
+
+      <!-- While Loop -->
+      <h2>2] While Loop</h2>
+      <p>
+        A while loop is used to repeat a block of code as long as a condition is
+        true.
+      </p>
+      <div class="syntax">
+        <h3>Syntax:</h3>
+        <pre>
+while (condition) {
+    // code to execute
+}</pre
+        >
+        <ul>
+          <li>condition → checked before each loop run.</li>
+          <li>If it’s true, code runs.</li>
+          <li>If it’s false, loop stops.</li>
+        </ul>
+      </div>
+
+      <h3>Example: Print sum of first 20 numbers</h3>
+      <pre>
+let b = 1;
+let add = 0;
+while (b <= 20) {
+    add += b;
+    b++;
+}
+console.log(add);</pre
+      >
+
+      <!-- Do While Loop -->
+      <h2>3] Do While Loop</h2>
+      <p>
+        A do...while loop is similar to a while loop, but with one key
+        difference: 👉 The code block will always run at least once, even if the
+        condition is false.
+      </p>
+      <div class="syntax">
+        <h3>Syntax:</h3>
+        <pre>
+do {
+    // code to execute
+} while (condition);
+</pre
+        >
+        <ul>
+          <li>Code inside do { } runs first.</li>
+          <li>Then the condition is checked.</li>
+          <li>If true → loop continues.</li>
+          <li>If false → loop stops.</li>
+          <li>Ensures the code runs at least once, no matter what.</li>
+        </ul>
+      </div>
+
+      <h3>Example: False condition check</h3>
+      <pre>
+let x = 6;
+let mixed = 0;
+
+do {
+    mixed += x;
+    x++;
+} while (x <= 5);
+
+console.log(mixed); // 6
+</pre
+      >
+
+      <!-- For Of Loop -->
+      <h2>4] For Of Loop</h2>
+      <p>
+        The for...of loop is used to iterate over iterable objects like arrays,
+        strings, maps, sets, etc. 👉 It gives you the value of each element (not
+        the index).
+      </p>
+      <div class="syntax">
+        <h3>Syntax:</h3>
+        <pre>
+for (let element of iterable) {
+    // code to execute
+}
+</pre
+        >
+        <ul>
+          <li>Works only on iterables (Array, String, Map, Set, etc.).</li>
+          <li>Gives values directly (not indexes).</li>
+          <li>
+            If you need indexes, use for...in or array.entries() with for...of.
+          </li>
+        </ul>
+      </div>
+
+      <h3>Example:</h3>
+      <p>
+        The for...of loop is mainly used on Array or String to execute all the
+        values of elements or characters.
+      </p>
+      <pre>
+let str = "HelloWorld"; // declare a string
+for (let i of str) {
+    console.log("i =", i);
+}
+</pre
+      >
+      <p>Output: Prints all characters of the string one by one</p>
+
+      <!-- For In Loop -->
+      <h2>5] For In Loop</h2>
+      <p>
+        The for...in loop is used to iterate over the keys (properties or
+        indexes) of an object or array. 👉 It gives you the key/index, not the
+        value directly.
+      </p>
+      <div class="syntax">
+        <h3>Syntax:</h3>
+        <pre>
+for (let key in object) {
+    // code to execute
+}
+</pre
+        >
+        <ul>
+          <li>Use for...in when you want keys/indexes.</li>
+          <li>Use for...of when you want values.</li>
+        </ul>
+      </div>
+
+      <h3>Example:</h3>
+      <pre>
+let person = { name: "Amol", age: 25, city: "Pune" };
+for (let key in person) {
+    console.log(key, ":", person[key]);
+}
+</pre
+      >
+
+      <h3>Output:</h3>
+      <pre>
+name : Amol
+age : 25
+city : Pune
+</pre
+      >
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
